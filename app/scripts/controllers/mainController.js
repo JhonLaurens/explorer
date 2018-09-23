@@ -1,4 +1,4 @@
-angular.module('ethExplorer')
+angular.module('dmExplorer')
     .controller('mainCtrl', function ($rootScope, $scope, $location) {
 
 	var web3 = $rootScope.web3;

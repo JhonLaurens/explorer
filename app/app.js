@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ethExplorer', ['ngRoute','ui.bootstrap'])
+angular.module('dmExplorer', ['ngRoute','ui.bootstrap'])
 
 .config(['$routeProvider',
     function($routeProvider) {

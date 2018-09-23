@@ -1,4 +1,4 @@
-angular.module('ethExplorer')
+angular.module('dmExplorer')
     .controller('addressInfoCtrl', function ($rootScope, $scope, $location, $routeParams, $q) {
 
       var web3 = $rootScope.web3;
@@ -10,7 +10,7 @@ angular.module('ethExplorer')
         if($scope.addressId!==undefined) {
           getAddressInfos().then(function(result){
             $scope.balance = result.balance;
-            $scope.balanceInEther = result.balanceInEther;
+            $scope.balanceInDM = result.balanceInDM;
           });
         }
 
@@ -22,7 +22,7 @@ angular.module('ethExplorer')
             if(!error) {
                 deferred.resolve({
                   balance: result,
-                  balanceInEther: web3.fromWei(result, 'ether')
+                  balanceInDM: web3.fromWei(result, 'ether')
                 });
             } else {
                 deferred.reject(error);

@@ -1,4 +1,4 @@
-angular.module('ethExplorer')
+angular.module('dmExplorer')
     .controller('blockInfosCtrl', function ($rootScope, $scope, $location, $routeParams,$q) {
 
 	var web3 = $rootScope.web3;
@@ -55,15 +55,10 @@ angular.module('ethExplorer')
                             $scope.time = newDate.toUTCString();
                         }
                     }
-
-
-
                 });
-
             } else {
                 $location.path("/");
             }
-
 
             function getBlockInfos() {
                 var deferred = $q.defer();
@@ -76,10 +71,7 @@ angular.module('ethExplorer')
                     }
                 });
                 return deferred.promise;
-
             }
-
-
         };
         $scope.init();
 
